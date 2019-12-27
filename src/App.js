@@ -4,7 +4,7 @@ import ToDoList from './ToDoList'
 
 class App extends Component {
     // states is class field
-    state={
+    state = {
         todosList:[],
     };
 

@@ -11,7 +11,7 @@ import './ToDo.css'
 //   </div>
 // );
 
-const ToDoList = (props) =>{
+const ToDoList = (props) => {
   return (
     <div>
       {props.toDoList.map( todo => <ToDo key={uid(todo)} Id={ todo.id } Text={todo.text} Props={props}/> ) }
