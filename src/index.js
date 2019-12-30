@@ -9,7 +9,7 @@ import Home from './home'
 import NotFound from './notfound';
 
 const routing = (
-    <Router basename={'/To-do-app/'}>
+    <Router basename={window.location.pathname || ''}>
         <div>
             <ul>
                 <li>
@@ -23,7 +23,7 @@ const routing = (
                 </li>
             </ul>
             <Switch>
-                <Route exact path="/" render={ () => <Home /> } />
+                <Route exact path="/" component={Home} />
                 <Route path="/todo" component={App} />
                 <Route path="/contact" component={Contact} />
                 <Route component={NotFound} />
