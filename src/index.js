@@ -9,7 +9,7 @@ import Home from './home'
 import NotFound from './notfound';
 
 const routing = (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={'To-do-app/'}>
         <div>
             <ul>
                 <li>
