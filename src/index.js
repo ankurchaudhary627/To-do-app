@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch, NavLink } from 'react-router-dom'
 
 import './index.css';
-import Contact from './contact'
-import App from './App';
-import Home from './home'
-import NotFound from './notfound';
+import Contact from './Components/contact'
+import App from './ToDoApp';
+import Home from './Components/home'
+import NotFound from './Components/notfound';
 
 const routing = (
-    <Router basename={window.location.pathname || ''}>
+    <Router >
         <div>
             <ul>
                 <li>

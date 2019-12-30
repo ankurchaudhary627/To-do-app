@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Form from './Form'
-import ToDoList from './ToDoList'
+import Form from './Components/Form'
+import ToDoList from './Components/ToDoList'
 
 class App extends Component {
     // states is class field
@@ -29,8 +29,7 @@ class App extends Component {
         return (
             <div>
                 <Form title='My todo app' onClickAdd={this.addNewToDo}/>
-                <ToDoList toDoList={this.state.todosList } onClickDel={this.delToDo}/>   
-                {/* <ToDoList toDoList={this.state.todosList }/>    */}
+                <ToDoList toDoList={this.state.todosList } onClickDel={this.delToDo}/>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React from 'react'
 import {default as UUID} from "uuid"
-import './App.css'
+import './Form.css'
 
 class Form extends React.Component {
     state={
