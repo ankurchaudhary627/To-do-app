@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ankurchaudhary627/To-do-app/static/css/main.0ba043a4.chunk.css",
-    "main.js": "/ankurchaudhary627/To-do-app/static/js/main.b4570a26.chunk.js",
-    "main.js.map": "/ankurchaudhary627/To-do-app/static/js/main.b4570a26.chunk.js.map",
+    "main.js": "/ankurchaudhary627/To-do-app/static/js/main.c2caef7b.chunk.js",
+    "main.js.map": "/ankurchaudhary627/To-do-app/static/js/main.c2caef7b.chunk.js.map",
     "runtime-main.js": "/ankurchaudhary627/To-do-app/static/js/runtime-main.795317ad.js",
     "runtime-main.js.map": "/ankurchaudhary627/To-do-app/static/js/runtime-main.795317ad.js.map",
     "static/js/2.d2654edd.chunk.js": "/ankurchaudhary627/To-do-app/static/js/2.d2654edd.chunk.js",
     "static/js/2.d2654edd.chunk.js.map": "/ankurchaudhary627/To-do-app/static/js/2.d2654edd.chunk.js.map",
     "index.html": "/ankurchaudhary627/To-do-app/index.html",
-    "precache-manifest.3d13488f2e0e69ee8bae2637001a4b30.js": "/ankurchaudhary627/To-do-app/precache-manifest.3d13488f2e0e69ee8bae2637001a4b30.js",
+    "precache-manifest.26e19c8cc2de1de1cb095cf941216f09.js": "/ankurchaudhary627/To-do-app/precache-manifest.26e19c8cc2de1de1cb095cf941216f09.js",
     "service-worker.js": "/ankurchaudhary627/To-do-app/service-worker.js",
     "static/css/main.0ba043a4.chunk.css.map": "/ankurchaudhary627/To-do-app/static/css/main.0ba043a4.chunk.css.map",
     "static/js/2.d2654edd.chunk.js.LICENSE": "/ankurchaudhary627/To-do-app/static/js/2.d2654edd.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.795317ad.js",
     "static/js/2.d2654edd.chunk.js",
     "static/css/main.0ba043a4.chunk.css",
-    "static/js/main.b4570a26.chunk.js"
+    "static/js/main.c2caef7b.chunk.js"
   ]
 }
