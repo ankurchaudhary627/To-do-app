@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router, Switch, NavLink } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch, NavLink } from 'react-router-dom'
 
 import './index.css';
 import Contact from './contact'
@@ -9,7 +9,7 @@ import Home from './home'
 import NotFound from './notfound';
 
 const routing = (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <div>
             <ul>
                 <li>
@@ -23,7 +23,7 @@ const routing = (
                 </li>
             </ul>
             <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" render={ () => <Home /> } />
                 <Route path="/todo" component={App} />
                 <Route path="/contact" component={Contact} />
                 <Route component={NotFound} />
