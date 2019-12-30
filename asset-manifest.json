@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ankurchaudhary627/To-do-app/static/css/main.5c286aa3.chunk.css",
+    "main.js": "/ankurchaudhary627/To-do-app/static/js/main.e9326fa6.chunk.js",
+    "main.js.map": "/ankurchaudhary627/To-do-app/static/js/main.e9326fa6.chunk.js.map",
+    "runtime-main.js": "/ankurchaudhary627/To-do-app/static/js/runtime-main.795317ad.js",
+    "runtime-main.js.map": "/ankurchaudhary627/To-do-app/static/js/runtime-main.795317ad.js.map",
+    "static/js/2.93f3605d.chunk.js": "/ankurchaudhary627/To-do-app/static/js/2.93f3605d.chunk.js",
+    "static/js/2.93f3605d.chunk.js.map": "/ankurchaudhary627/To-do-app/static/js/2.93f3605d.chunk.js.map",
+    "index.html": "/ankurchaudhary627/To-do-app/index.html",
+    "precache-manifest.4623b4ab3cdf9839ca678d4dfe7324a4.js": "/ankurchaudhary627/To-do-app/precache-manifest.4623b4ab3cdf9839ca678d4dfe7324a4.js",
+    "service-worker.js": "/ankurchaudhary627/To-do-app/service-worker.js",
+    "static/css/main.5c286aa3.chunk.css.map": "/ankurchaudhary627/To-do-app/static/css/main.5c286aa3.chunk.css.map",
+    "static/js/2.93f3605d.chunk.js.LICENSE": "/ankurchaudhary627/To-do-app/static/js/2.93f3605d.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.795317ad.js",
+    "static/js/2.93f3605d.chunk.js",
+    "static/css/main.5c286aa3.chunk.css",
+    "static/js/main.e9326fa6.chunk.js"
+  ]
+}
