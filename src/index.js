@@ -23,9 +23,9 @@ const routing = (
                 </li>
             </ul>
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/todo" component={App} />
-                <Route path="/contact" component={Contact} />
+                <Route exact path="/To-do-app/" component={Home} />
+                <Route path="/To-do-app/todo" component={App} />
+                <Route path="/To-do-app/contact" component={Contact} />
                 <Route component={NotFound} />
             </Switch>
         </div>
