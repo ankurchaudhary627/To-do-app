@@ -9,7 +9,7 @@ import Home from './home'
 import NotFound from './notfound';
 
 const routing = (
-    <Router basename={'To-do-app/'}>
+    <Router basename={'To-do-app'}>
         <div>
             <ul>
                 <li>
