@@ -37,20 +37,39 @@ class ToDo extends React.Component {
   // Each class must have render()  
   render() {
 
-    let checkBox={
-      textDecoration: this.state.checked? 'line-through':''
+    let todoStyle={
+      background: '#f4f4f4',
+      padding: '10px',
+      borderBottom: '1px #ccc dotted',
+      textDecoration: this.state.checked?
+      'line-through' : 'none',
+      alignItems: 'center',
+      justifyContent: 'center',
+      display: 'flex',
+      flexDirection: 'column'
     }
 
     return ( // here this.props means whatever is passed to ToDo component
-      <div className="to-do-item">
-        <input type="checkbox" onClick={this.handleChecked}/>
-        <p id="todo-text" style={checkBox}>
-          {this.props.Text}
+      <div className="to-do-item" style={todoStyle}>
+        <p style={{width:'100px'}}>
+          <input type="checkbox" onClick={this.handleChecked}/>{' '}
+          { this.props.Text }
+          {' '}
+          <button onClick={this.handleDelete} style={btnStyle}>x</button>
         </p>
-        <button onClick={this.handleDelete}>Delete todo</button>
       </div>
     );   
   }
+}
+
+const btnStyle ={
+  background: '#ff0000',
+  color: '#fff',
+  border: 'none',
+  padding: '5px 8px',
+  borderRadius: '50%',
+  cursor: 'pointer',
+  float: 'right'
 }
 
 export default ToDoList;
