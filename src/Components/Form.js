@@ -1,5 +1,9 @@
 import React from 'react'
 import {default as UUID} from "uuid"
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import Input from '@material-ui/core/Input';
+import Button from '@material-ui/core/Button';
 import './Form.css'
 
 class Form extends React.Component {
@@ -24,14 +28,19 @@ class Form extends React.Component {
             <div>
                 <div className="header">{this.props.title}</div>
                 <form onSubmit={this.handleSubmit}>
-                <input 
-                    type='text' 
-                    placeholder='Take Note before you forget!'
-                    value={this.state.userIp}
-                    onChange={event => this.setState({ userIp : event.target.value })}
-                    required 
-                />
-                <button>Add todo</button>
+                    <Input 
+                        color='primary'
+                        fullWidth={true}
+                        type='text' 
+                        placeholder='Take Note before you forget!'
+                        value={this.state.userIp}
+                        onChange={event => this.setState({ userIp : event.target.value })}
+                        required 
+                    />
+                    <Fab type='submit'  color="primary" aria-label="add">
+                        <AddIcon />
+                    </Fab>
+                {/* <button>Add todo</button> */}
                 </form>
             </div>
         );

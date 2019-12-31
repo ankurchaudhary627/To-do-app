@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Form from './Components/Form'
-import ToDoList from './Components/ToDoList'
+import Form from './Form'
+import ToDoList from './ToDoList'
 
 class App extends Component {
     // states is class field
