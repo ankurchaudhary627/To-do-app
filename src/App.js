@@ -9,12 +9,14 @@ class App extends Component {
         return (
             <div>
                 <NavBar />
-                <Container>
+                {/* <Container>
                     <AppRouter />
-                </Container>
+                </Container> */}
             </div>
         )
     }
 }
 
 export default App
+
+

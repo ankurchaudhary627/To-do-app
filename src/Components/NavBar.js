@@ -18,7 +18,14 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import { MenuList, MenuItem} from '@material-ui/core';
-import { Link, withRouter } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom'
+
+import routes from './AppRouter';
+
+import Home from './home'
+import ToDoApp from './ToDoApp'
+import Contact from './contact'
+import NotFound from './notfound'
 
 const drawerWidth = 240;
 
@@ -91,6 +98,10 @@ export default function PersistentDrawerLeft() {
     setOpen(false);
   };
 
+  const activeRoute = (routeName) => {
+    return this.props.location.pathname.indexOf(routeName) > -1 ? true : false;
+  }
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -130,16 +141,81 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </div>
         <Divider />
-        <MenuList>
+        {/* <List>
           {['Home', 'To-do App', 'Contact'].map((text, index) => (
-            <Link to={'/'} >
-                <MenuItem button key={text}>
+            // <Link to={'/'} >
+                <ListItem button key={text} component="a" href="https://www.facebook.com">
                     <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                     <ListItemText primary={text} />
-                </MenuItem>
-            </Link>
+                </ListItem>
+            // </Link>
           ))}
-        </MenuList>
+        </List> */}
+        {/* <Router>
+          {
+            routes.map((prop, key) => {
+              return (
+                <Switch>
+                  <Route exact path="/" component={Home} >
+                    <Link to={prop.path} style={{textDecoration:'none'}} key={key}>
+                      <ListItem button key={key}>
+                        <ListItemIcon><MailIcon/></ListItemIcon>
+                        <ListItemText primary={prop.sidebarName} />
+                      </ListItem>
+                    </Link>
+                  </Route>
+                  <Route path="/todo" component={ToDoApp} />
+                  <Route path="/contact" component={Contact} />
+                  <Route component={NotFound} />
+                </Switch>
+                // <Link to={prop.path} style={{ textDecoration: 'none', color:'black' }} key={key}>
+                //   <ListItem button key={key} >
+                //     <ListItemIcon>
+                //       <MailIcon />
+                //     </ListItemIcon>
+                //     <ListItemText primary={prop.sidebarName} />
+                //   </ListItem>
+                // </Link>
+              );
+            })
+            
+          }
+        
+        </Router> */}
+
+        <Router>
+          <Link to={'/'} style={{ textDecoration: 'none', color:'black' }}>
+              <ListItem button >
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary='Home' />
+              </ListItem>
+          </Link>
+          <Link to={'/todo'} style={{ textDecoration: 'none', color:'black' }}>
+              <ListItem button >
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary='To-do App' />
+              </ListItem>
+          </Link>
+          <Link to={'/contact'} style={{ textDecoration: 'none', color:'black' }}>
+              <ListItem button >
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary='Contact' />
+              </ListItem>
+          </Link>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/todo" component={ToDoApp} />
+            <Route path="/contact" component={Contact} />
+            <Route component={NotFound} />
+          </Switch>
+        </Router>
+
         <Divider />
       </Drawer>
       <main
