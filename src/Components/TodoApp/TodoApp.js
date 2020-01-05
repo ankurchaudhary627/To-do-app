@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Form from './Form'
-import ToDoList from './ToDoList'
+import ToDoList from './TodoList'
 
-class App extends Component {
-    // states is class field
+export class TodoApp extends Component {
     state = {
         todosList:[],
     };
@@ -26,16 +25,19 @@ class App extends Component {
     };
 
     render() {
+        // const url=this.props.match.url
+        console.log('todos',this.state.todosList)
         return (
             <div>
-                <Form title='My todo app' onClickAdd={this.addNewToDo}/>
+                <h1>My todo app</h1>
+                <Form onClickAdd={this.addNewToDo}/>
                 <ToDoList toDoList={this.state.todosList } onClickDel={this.delToDo}/>
+                {/* <Route exact path={url} render={
+                    () =><h3>You're on TodoApp page.</h3>
+                }/> */}
             </div>
         )
     }
 }
 
-export default App
-
-
-// rce
+export default TodoApp

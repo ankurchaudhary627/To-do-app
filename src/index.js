@@ -1,12 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './Components/App';
 
-import './index.css';
-import App from './App';
-import { Container } from '@material-ui/core';
-
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
-
+ReactDOM.render(<App />, document.getElementById('root'))
