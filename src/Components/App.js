@@ -1,4 +1,4 @@
-import React, { Fragment,Redirect  } from 'react'
+import React, { Fragment  } from 'react'
 import Layout from './Layout/Layout'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -18,12 +18,10 @@ export default class extends Component {
       .then(rdata=>{
         this.setState({todos:rdata})
       })
-      setTimeout(() => {
-        console.log('todo',this.state.todos)
-      }, 2000);
   }
   
   render() {
+
     const theme= createMuiTheme({
       overrides: {
         MuiCssBaseline: {
