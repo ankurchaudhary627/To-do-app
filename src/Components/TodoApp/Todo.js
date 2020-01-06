@@ -13,8 +13,20 @@ export class Todo extends Component {
         this.props.Props.onClickDel(this.props.Id);
     };
 
+    componentDidMount() {
+        if(this.props.completed) {
+            this.setState({ checked: true })
+        }
+        else
+            this.setState({ checked: false })
+    }
+
     handleChecked = (e) => {
         this.setState({ checked: e.target.checked });
+        if(e.target.checked)
+            this.props.completed=true
+        else
+            this.props.completed=false
     };
 
     render() {
@@ -22,6 +34,7 @@ export class Todo extends Component {
             textDecoration: this.state.checked?
                 'line-through' : 'none'
         }
+        
         return (
             <ListItem button dense ContainerComponent="div">
                 <ListItemIcon>

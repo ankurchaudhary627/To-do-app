@@ -8,8 +8,9 @@ export default (props) => {
       <Fragment>
         <br />
         <br />
-        <BackdropFilter  filter={"blur(10px)"} >
-            {props.toDoList.map( todo => <ToDo key={uid(todo)} Id={ todo.id } Text={todo.text} Props={props}/> ) }
+        
+        <BackdropFilter  filter={"blur(10px)"} canvasFallback={true}>
+            {props.toDoList.map( todo => <ToDo key={uid(todo)} Id={ todo.id } Text={todo.text} completed={todo.checked} Props={props}/> ) }
             {/* {props.toDoList.map( todo => <ToDo key={ uid(todo) } text={todo.text} /> ) } */}
         </BackdropFilter>
       </Fragment>

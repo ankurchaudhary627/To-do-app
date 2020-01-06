@@ -20,7 +20,11 @@ export class Form extends Component {
             alert('No spaces allowed')
         else
         {
-            const data={text:this.state.userIp, id:UUID.v4()}
+            const data={
+                text:this.state.userIp, 
+                id:UUID.v4(),
+                checked: false
+            }
             this.props.onClickAdd(data);
             this.setState({userIp: ''})
         }

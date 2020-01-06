@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment,Redirect  } from 'react'
 import Layout from './Layout/Layout'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -11,6 +11,18 @@ import TodoApp from './TodoApp/TodoApp'
 import { Component } from 'react'
 
 export default class extends Component {
+  
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
+      .then(r=>r.json())
+      .then(rdata=>{
+        this.setState({todos:rdata})
+      })
+      setTimeout(() => {
+        console.log('todo',this.state.todos)
+      }, 2000);
+  }
+  
   render() {
     const theme= createMuiTheme({
       overrides: {
@@ -24,6 +36,7 @@ export default class extends Component {
         }
       }
     })
+
     return (
       <BrowserRouter>
       <Fragment>
@@ -31,7 +44,7 @@ export default class extends Component {
           <Layout>
             <Switch>
               <Route exact path='/' render = {props=><Home {...props} />} />
-              <Route path='/todo' render={props=><TodoApp {...props} />}/>
+              <Route path='/todo' render={props=><TodoApp todos={this.state?.todos} />}/>
               <Route path='/contact' render = {props=><Contact {...props} />} />
               <Route path='/about' render = {props=><About {...props} />} />
             </Switch>

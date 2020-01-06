@@ -6,11 +6,35 @@ export class Contact extends Component {
         const url=this.props.match.url
         console.log('contact props',this.props)
         return (
+            <div>
             <Fragment>
                 <Route exact path={url} render={
                     () => <h3>You're on Contact page.</h3>
                 }/>
+                <h1>
+                    test
+                </h1>
+
             </Fragment>
+            <Fragment>
+            <Route exact path={url} render={
+                () => <h3>You're on Contact page.</h3>
+            }/>
+            <h1>
+                test
+            </h1>
+            
+        </Fragment>
+        <Fragment>
+        <Route exact path={url} render={
+            () => <h3>You're on Contact page.</h3>
+        }/>
+        <h1>
+            test
+        </h1>
+        
+    </Fragment>
+    </div>
         )
     }
 }
