@@ -140,7 +140,7 @@ class Layout extends Component {
               <Menu />
             </IconButton>
             <Typography variant='h6' noWrap>
-              Current time :{this.state.currTime}
+              Current time {this.state.currTime}
             </Typography>
           </Toolbar>
         </AppBar>
