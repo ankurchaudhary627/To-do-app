@@ -51,7 +51,9 @@ export class TodoApp extends Component {
         // const url=this.props.match.url
         return (
             <div>
-                <h1>Todo app</h1>
+                <p style={{color:'black', fontSize:'300%', fontFamily:'sans'}}>
+                    <center>Todo App</center>
+                </p>
                 <Form onClickAdd={this.addNewToDo}/>
                 <ToDoList toDoList={this.state.todosList } onClickDel={this.delToDo} checkBox={this.checkBoxChanged}/>
                 {/* <Route exact path={url} render={

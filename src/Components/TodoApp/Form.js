@@ -49,14 +49,16 @@ export class Form extends Component {
                         fullWidth={true}
                         InputLabelProps={{          // styles input label
                             style: {
-                              color:'black'
+                              color:'white',
+                              fontFamily:'sans',
+                              fontSize:'150%'
                             }
                           }}
-                        // inputProps={{
-                        //     style: {
-                        //         width,
-                        //     },
-                        // }}
+                        inputProps={{
+                            style: {
+                                color: 'white'
+                            },
+                        }}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">

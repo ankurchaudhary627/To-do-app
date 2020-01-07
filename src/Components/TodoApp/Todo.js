@@ -18,8 +18,10 @@ export class Todo extends Component {
         let checkStyle={
             textDecoration: this.props.Completed?
                 'line-through' : 'none',
-            color: 'red',
-            display: 'block'
+            // color: '#333',
+            display: 'block',
+            fontSize: '150%',
+            fontFamily: 'sans'
         }
         
         return (
@@ -32,10 +34,10 @@ export class Todo extends Component {
                         color="primary"
                     />
                 </ListItemIcon>
-                <ListItemText id={this.props.Id} primary={ this.props.Text } style={checkStyle}/>
+                <ListItemText id={this.props.Id} primary={<p style={checkStyle}> {this.props.Text}</p> } />
                 <ListItemSecondaryAction>
                     <IconButton edge="end" aria-label="delete todo" onClick={this.handleDelete}>
-                        <DeleteIcon />
+                        <DeleteIcon style={{color:'black'}}/>
                     </IconButton>
                 </ListItemSecondaryAction>
             </ListItem>

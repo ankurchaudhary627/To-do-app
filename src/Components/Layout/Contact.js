@@ -11,29 +11,7 @@ export class Contact extends Component {
                 <Route exact path={url} render={
                     () => <h3>You're on Contact page.</h3>
                 }/>
-                <h1>
-                    test
-                </h1>
-
             </Fragment>
-            <Fragment>
-            <Route exact path={url} render={
-                () => <h3>You're on Contact page.</h3>
-            }/>
-            <h1>
-                test
-            </h1>
-            
-        </Fragment>
-        <Fragment>
-        <Route exact path={url} render={
-            () => <h3>You're on Contact page.</h3>
-        }/>
-        <h1>
-            test
-        </h1>
-        
-    </Fragment>
     </div>
         )
     }
